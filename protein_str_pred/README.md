@@ -34,7 +34,7 @@ bash download_pdb.sh ./data
 python unpack_pdb.py --num_workers [N]
 python make_splits.py
 ```
-In addition to the downloaded PDB data, this will make `splits/limit256.csv`, which we also provide [here]().
+In addition to the downloaded PDB data, this will make `splits/limit256.csv`, which we also provide [here](https://drive.google.com/drive/folders/1S34ApICIXh7CAt5hcCV7UlXxIFSBD7w2?usp=drive_link).
 
 Additionally, to create amino-sequence features, which are used in the training and generation steps of the diffusion models, one needs to install [OmegaFold](https://github.com/bjing2016/OmegaFold) by
 ```
@@ -56,7 +56,7 @@ mv TMscore /usr/local/bin/
 ```
 
 ## Paper results
-All the trained models (i.e., checkpoints), the configuration of the training, and the sampled structures used in the paper are provided [here](). The data regarding the RGDM and DDPM are saved in `protein_paper_results/results/RGDM_trained` and `protein_paper_results/results/DDPM_trained`, respectively. To reproduce the results in the paper, download `paper_results/protien_paper_resutls/results` (i.e., make directory `./results`). 
+All the trained models (i.e., checkpoints), the configuration of the training, and the sampled structures used in the paper are provided [here](https://drive.google.com/drive/folders/1S34ApICIXh7CAt5hcCV7UlXxIFSBD7w2?usp=drive_link). The data regarding the RGDM and DDPM are saved in `protein_paper_results/results/RGDM_trained` and `protein_paper_results/results/DDPM_trained`, respectively. To reproduce the results in the paper, download `paper_results/protien_paper_resutls/results` (i.e., make directory `./results`). 
 
 ## Sampling
 To perform the sampling, run the following:
