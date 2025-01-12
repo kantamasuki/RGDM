@@ -4,7 +4,7 @@ This is the implementation of the RGDM and DDPM in protein structure prediction 
 
 
 ## Version Information
-We use Anaconda virtual environment. The environment and the versions of the Python libraries used in our work are as follows, while any reasonably recent version will be fine: 
+We use Anaconda virtual environment. The environment and the versions of the GPU and Python libraries used in the work are as follows, while any reasonably recent version will be fine: 
 
 - GPU: NVIDIA GeForce RTX 3090
     - CUDA Version: 11.7
@@ -28,13 +28,13 @@ pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geo
 pip install e3nn biopython
 ```
 
-Also, one needs to download protein structures from the PDB by
+Also, one needs to download protein structures from Protein Data Bank ([PDB](https://www.rcsb.org)) by
 ```
 bash download_pdb.sh ./data
 python unpack_pdb.py --num_workers [N]
 python make_splits.py
 ```
-In addition to the downloaded PDB data, this will make `splits/limit256.csv`, which we also provide at [google drive]().
+In addition to the downloaded PDB data, this will make `splits/limit256.csv`, which we also provide [here]().
 
 Additionally, to create amino-sequence features, which are used in the training and generation steps of the diffusion models, one needs to install [OmegaFold](https://github.com/bjing2016/OmegaFold) by
 ```
@@ -56,7 +56,7 @@ mv TMscore /usr/local/bin/
 ```
 
 ## Paper results
-All the trained models (i.e., checkpoints), the configuration of the training, and the sampled structures used in the paper are provided at [google drive](). The data regarding the RGDM and DDPM are saved in `protein_paper_results/results/RGDM_trained` and `protein_paper_results/results/DDPM_trained`, respectively. To reproduce the results in the paper, download `paper_results/protien_paper_resutls/results` (i.e., make directory `./results`). 
+All the trained models (i.e., checkpoints), the configuration of the training, and the sampled structures used in the paper are provided [here](). The data regarding the RGDM and DDPM are saved in `protein_paper_results/results/RGDM_trained` and `protein_paper_results/results/DDPM_trained`, respectively. To reproduce the results in the paper, download `paper_results/protien_paper_resutls/results` (i.e., make directory `./results`). 
 
 ## Sampling
 To perform the sampling, run the following:
