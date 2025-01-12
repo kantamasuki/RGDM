@@ -1,0 +1,33 @@
+{
+    "ch": 128,
+    "ch_mult": [
+        1,
+        2,
+        2,
+        2
+    ],
+    "attn": [
+        1
+    ],
+    "num_res_blocks": 2,
+    "dropout": 0.1,
+    "beta_1": 0.0001,
+    "beta_T": 0.06585156211853027,
+    "T": 300,
+    "lr": 0.0002,
+    "grad_clip": 1.0,
+    "total_steps": 1000001,
+    "img_size": 64,
+    "warmup": 5000,
+    "batch_size": 128,
+    "num_workers": 4,
+    "ema_decay": 0.9999,
+    "parallel": false,
+    "logdir": "./logs/DDPM_FFHQ64_T300",
+    "sample_size": 64,
+    "sample_step": 25000,
+    "save_step": 50000,
+    "eval_step": 0,
+    "num_images": 50000,
+    "dataset_key": "ffhq64"
+}
