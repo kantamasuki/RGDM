@@ -1,4 +1,4 @@
-# Protein structure prediction with Renormalization Group-based Diffusion Model (RGDM)
+# Protein structure prediction with RGDM
 
 This is the implementation of the RGDM and DDPM used in numerical experiments of protein structure prediction in [Generative Diffusion Model with Inverse Renormalization Group Flows](https://arxiv.org/abs/). Part of the codes is based on a previous work (['EigenFold' by B.Jing](https://github.com/bjing2016/EigenFold)) while we are responsible for any issues regarding the codes provided here.
 
