@@ -72,4 +72,4 @@ To perform the training, run the following
 python RGDM_train.py --splits splits/limit256.csv 
 python DDPM_train.py --splits splits/limit256.csv 
 ```
-These create a new log directory `./workdir/`, below which the checkpoints and the configuration during the training are saved.
+These create a new log directory `./workdir/`, below which the checkpoints and the configuration during the training are saved. To change the hyperparameters during the training, modify `utlis/RGDM_parsing.py` and `utils/DDPM_parsing.py`, respectively.

@@ -18,7 +18,7 @@ def parse_train_args():
     parser.add_argument('--data_skip', action='store_true', default=True)
     parser.add_argument('--inference_mode', action='store_true', default=False)
     
-    ### Preprocess args
+    ### Hyperparamete args
     parser.add_argument('--T32', type=int, default=80)
     parser.add_argument('--tau', type=float, default=8.174705437759766)
 
@@ -28,7 +28,8 @@ def parse_train_args():
                         choices=['entropy', 'rate'], default='rate')
     parser.add_argument('--inf_step', type=float, default=0.5)
     parser.add_argument('--inf_freq', type=int, default=1)
-    parser.add_argument('--inf_mols', type=int, default=100)
+    parser.add_argument('--inf_mols', type=int, default=200)
+    parser.add_argument('--maxN', type=int, default=256)
     
     ## OmegaFold args
     parser.add_argument('--omegafold_num_recycling', type=int, default=4)
