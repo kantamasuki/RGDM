@@ -64,7 +64,7 @@ def main():
     # Prepare path to save the score of each sample
     inf_name = f"{args.splits.split('/')[-1]}.ep{ep}.num{args.num_samples}."\
         + inf_args.split_key
-    csv_path = os.path.join(inf_args.model_dir, f'{inf_name}/0_result.csv')
+    csv_path = os.path.join(inf_args.model_dir, f'{inf_name}/result.csv')
     
     # Run sampling
     _ = RGDM_sampling_epoch(
