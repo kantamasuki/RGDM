@@ -4,7 +4,7 @@
 
 Implementation of [Generative Diffusion Model with Inverse Renormalization Group Flows](https://arxiv.org/abs/) by Kanta Masuki and Yuto Ashida.
 
-Renormalization group-based diffusion model (RGDM) is a generative diffusion model based on the exact renormalization group, which leverages multiscale structures inherent in natural data, such as the protein structures and images. In this Github repository, we provide the Python codes used in the numerical experiments described in the paper. For their detailed usages, please refer to the readme files in each directory, i.e., `./protein_str_pred/README.md` and `./image_generation/README.md`.
+Renormalization group-based diffusion model (RGDM) is a generative diffusion model based on the exact renormalization group, which leverages multiscale structures inherent in natural data, such as the protein structures and images. In this Github repository, we provide the Python codes used in the numerical experiments described in the paper. For their detailed usages, please refer to the readme files `./README_protein.md` and `./README_image.md`.
 
 Please contact kmasuki@g.ecc.u-tokyo.ac.jp with any comments or issues regarding this repository. 
 
