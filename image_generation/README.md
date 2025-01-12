@@ -16,10 +16,10 @@ We use `venv` virtual environment. The environment and the versions of GPU and P
 We note that the [clean-fid library](https://github.com/GaParmar/clean-fid) is necessary for evaluating the performance of the models. 
 
 ## Dataset
-In our work, we used [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [FFHQ](https://github.com/NVlabs/ffhq-dataset) datasets. We note that we resized the FFHQ images with resolution 128x128 to 64x64 by `./data/ffhq_dataset/resize_ffhq.py`. We provide resized images [here]() (`image_paper_results/ffhq64.tar.gz`). 
+In our work, we used [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [FFHQ](https://github.com/NVlabs/ffhq-dataset) datasets. We note that we resized the FFHQ images with resolution 128x128 to 64x64 by `./data/ffhq_dataset/resize_ffhq.py`. We provide resized images [here](https://drive.google.com/drive/folders/1S34ApICIXh7CAt5hcCV7UlXxIFSBD7w2?usp=drive_link) (`image_paper_results/ffhq64.tar.gz`). 
 
 ## Paper results
-All the trained models (i.e., checkpoints) used in the paper are provided [here](). The configuration files of the training are provided in `./RGDM_configs` and `./DDPM_configs`. To reproduce the results in the paper, download `paper_results/image_paper_resutls/results` (i.e., make directory `./results`). 
+All the trained models (i.e., checkpoints) used in the paper are provided [here](https://drive.google.com/drive/folders/1S34ApICIXh7CAt5hcCV7UlXxIFSBD7w2?usp=drive_link). The configuration files of the training are provided in `./RGDM_configs` and `./DDPM_configs`. To reproduce the results in the paper, download `paper_results/image_paper_resutls/results` (i.e., make directory `./results`). 
 
 ## Sampling
 To perform the sampling, run `MODEL_sample.py`, specifying the configuration file and checkpoint. For example, to sample FFHQ64 images with the RGDM trained at $T=200$ (or, CIFAR10 images with the DDPM trained at $T=300$) run the following:
@@ -42,7 +42,7 @@ python DDPM_evaluate.py --config DDPM_configs/DDPM_CIFAR10_T300.json --ckpt resu
 ```
 
 ## Training
-To reproduce the training with FFHQ images of resolution 64x64, please unzip `ffhq64.tar.gz` provided [here]() below `./data/ffhq_dataset` (This will make directory `./data/ffhq_dataset/ffhq64`). To train the RGDM or DDPM, run the following:
+To reproduce the training with FFHQ images of resolution 64x64, please unzip `ffhq64.tar.gz` provided [here](https://drive.google.com/drive/folders/1S34ApICIXh7CAt5hcCV7UlXxIFSBD7w2?usp=drive_link) below `./data/ffhq_dataset` (This will make directory `./data/ffhq_dataset/ffhq64`). To train the RGDM or DDPM, run the following:
 ```
 python RGDM_train.py --config PATH_TO_CONFIG
 python DDPM_train.py --config PATH_TO_CONFIG
