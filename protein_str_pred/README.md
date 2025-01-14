@@ -75,4 +75,4 @@ python DDPM_train.py --splits splits/limit256.csv
 These create a new log directory `./workdir/`, below which the checkpoints and the configuration during the training are saved. To change the hyperparameters during the training, modify `utlis/RGDM_parsing.py` and `utils/DDPM_parsing.py`, respectively.
 
 ## Sampling with AlphaFold2
-To perform the sampling with AlphaFold2 in Fig. 3 in our paper, we used `./AlphaFold2_batch.ipynb` downloaded from [ColabFold](https://github.com/sokrypton/ColabFold). We verify that the program can be executed in Google Colab environment. The parameters we used are `msa_mode=MMseqs2 (UniRef+Environmental), num_models=1, num_recycles=1, stop_at_score=100, num_relax=0.`
+To perform the sampling with AlphaFold2 in Fig. 3 in our paper, we used `./AlphaFold2_batch.ipynb`, which is downloaded from [ColabFold](https://github.com/sokrypton/ColabFold). We verify that the program can be executed in Google Colab environment. The parameters we used are `msa_mode=MMseqs2 (UniRef+Environmental), num_models=1, num_recycles=1, stop_at_score=100, num_relax=0.`
