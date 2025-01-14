@@ -1,4 +1,4 @@
-# Image data generation with Renormalization Group-based Diffusion Model (RGDM)
+# Image data generation with the RGDM
 
 This is the implementation of the RGDM and DDPM in image generation in [Generative Diffusion Model with Inverse Renormalization Group Flows](https://arxiv.org/abs/). Part of the codes is based on [the original work of DDPM](https://arxiv.org/abs/2006.11239) by J. Ho et al.
 
