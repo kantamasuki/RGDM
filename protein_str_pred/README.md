@@ -67,8 +67,8 @@ python DDPM_sample.py --model_dir results/DDPM_trained --ckpt epoch_4.pt --split
 Sampled structures will be saved below `./results/RGDM_trained/` and `./results/DDPM_trained/`, respectively.
 
 ## Evaluation
-The evaluation of the scores used in the paper (i.e., RMSD, TM-Score, GDT-TS, GDT-HA) can be performed with `tmscore` in `./utils/pdb.py`, where one needs to compile `./TMscore.cpp` beforehand as described above. To evaluate the quality of a sampled structure 'samp.pdb' against reference `ref.pdb`, execute the following in your Python code:
-```Python
+The evaluation of the scores used in the paper (i.e., RMSD, TM-Score, GDT-TS, GDT-HA) can be performed with `tmscore` in `./utils/pdb.py`, where one needs to compile `./TMscore.cpp` beforehand as described above. To evaluate the quality of a sampled structure `samp.pdb` against reference `ref.pdb`, execute the following in your Python code:
+```
 tmscore(PATH_TO_samp.pdb, PATH_TO_ref.pdb, SEQUENCE_OF_RESIDUES)
 ```
 
