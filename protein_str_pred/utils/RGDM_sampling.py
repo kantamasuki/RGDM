@@ -76,7 +76,7 @@ def RGDM_sampling_epoch(args, model, dataset, device='cpu', pdbs=False, elbo=Non
             try:
                 pos, _ = pdb_to_npy(working_path, seqres=molseq)
                 pos = pos[:, 0].astype(np.float32)
-                res = tmscore(samp.path, pos, molseq, lddt=False)
+                res = tmscore(samp.path, pos, molseq)
                 samp.__dict__.update(res)
                 if samp.rmsd < rmsd:
                     rmsd = samp.rmsd

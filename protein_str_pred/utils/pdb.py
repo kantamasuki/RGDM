@@ -78,7 +78,7 @@ def pdb_to_npy_interpolate(seqlen, mask, pos_mask, mass=0.0785398163397448, c=(3
     return mu + (vec / val**0.5) @ z
 
 
-def tmscore(X_path, Y_path, molseq=None, lddt=True, lddt_start=1):
+def tmscore(X_path, Y_path, molseq=None):
     if type(X_path) is not str:
         PDBFile(molseq).add(X_path).write(os.path.join(my_dir, 'X.pdb'))
         X_path = os.path.join(my_dir, 'X.pdb')
@@ -101,18 +101,8 @@ def tmscore(X_path, Y_path, molseq=None, lddt=True, lddt_start=1):
     tm = float(tm.split(b'=')[1].split()[0])
     gdt_ts = float(gdt_ts.split(b'=')[1].split()[0])
     gdt_ha = float(gdt_ha.split(b'=')[1].split()[0])
-    
-    if lddt:
-        X_renum = os.path.join(my_dir, 'X_renum.pdb')
-        renumber_pdb(molseq, X_path, X_renum, start=lddt_start)
-        out = subprocess.check_output(['lddt', '-c', Y_path, X_renum],  # reference comes last
-            stderr=open('/dev/null', 'w'), cwd=my_dir)
-        for line in out.split(b'\n'):
-            if b'Global LDDT score' in line:
-                lddt = float(line.split(b':')[-1].strip())
-        return {'rmsd': rmsd, 'tm': tm, 'gdt_ts': gdt_ts, 'gdt_ha': gdt_ha, 'lddt': lddt}
-    else:
-        return {'rmsd': rmsd, 'tm': tm, 'gdt_ts': gdt_ts, 'gdt_ha': gdt_ha}
+
+    return {'rmsd': rmsd, 'tm': tm, 'gdt_ts': gdt_ts, 'gdt_ha': gdt_ha}    
 
     
 class PDBFile:
