@@ -12,12 +12,11 @@ class FFHQDataset(Dataset):
         self.transform = transform
         self.image_files = []
         
-        # サブディレクトリを再帰的に探索し、すべての画像ファイルのパスを収集
         assert os.path.exists(root_dir) == True
         for subdir, _, files in os.walk(root_dir):
             # print("files", files)
             for file in files:
-                if file.endswith(".png"):  # 必要に応じて他の拡張子もチェック
+                if file.endswith(".png"):
                     self.image_files.append(os.path.join(subdir, file))
 
     def __len__(self):
@@ -34,7 +33,7 @@ class FFHQDataset(Dataset):
 
 
 def get_dataset(dataset_key):
-    # CIFAR10の読み込み
+
     if dataset_key == "cifar10":
         dataset = CIFAR10(
             root='./data', train=True, download=True,
